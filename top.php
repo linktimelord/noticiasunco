@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Inta</title>
-        <link rel="shortcut icon" href="./imagenes/favicon.ico">
+        <title>Noticias Unco</title>
+        <link rel="shortcut icon" href="./imgs/favicon.jpg">
         <link rel="icon" href="./imagenes/favicon.ico" type="image/x-icon">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<meta name="news_keywords" content="prensa, noticias, universidad, comahue, pedco, uncoma" />

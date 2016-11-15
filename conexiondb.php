@@ -3,11 +3,11 @@
  function consulta($query, $dbname="dbname = 'libro_unco'"){
     if($dbname=="dbname = 'libro_unco'"){
         //echo "entro en ".$dbname;
-        $cadena= " host='170.210.83.57' port='5432' dbname='FeedUncoma' user='postgres' password='Conu.5921' ";
+        $cadena= " host='localhost' port='5432' dbname='FeedUncoma' user='postgres' password='Conu.5921' ";
     }
     else{
         //echo "entro en ".$dbname;
-        $cadena= " host='170.210.83.57' port='5432' dbname='FeedUncoma' user='postgres' password='Conu.5921' ";
+        $cadena= " host='localhost' port='5432' dbname='FeedUncoma' user='postgres' password='Conu.5921' ";
     }
     $dbcon= pg_connect($cadena);
    // pg_set_client_encoding($dbcon, $coding);

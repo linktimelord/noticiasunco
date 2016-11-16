@@ -128,35 +128,27 @@ function mostrarNoticias() {
     echo $muestra;
 }
 
-
 function mostrarNoticias2() {
     $muestra = "";
-	$todaslasnoticias = consulta("Select o.*, n.id_noticia, n.titulo, n.copete, n.link, n.fecha, n.autor, n.imagen, n.id_fuente, f.id_fuente, f.nombre, f.url, f.pagina from ordenar() as o  INNER JOIN noticia as n ON (n.link = o.link) INNER JOIN fuente as f ON (n.id_fuente = f.id_fuente) order by o.fecha desc", $dbname="dbname = FeedUncoma");
-    //$fuentes = consulta("Select o.*, n.id_noticia, n.titulo, n.copete, n.link, n.fecha, n.autor, n.imagen, n.id_fuente, f.id_fuente, f.nombre, f.url, f.pagina from ordenar() as o  INNER JOIN noticia as n ON (n.link = o.link) INNER JOIN fuente as f ON (n.id_fuente = f.id_fuente) order by o.fecha desc", $dbname="dbname = FeedUncoma");
+	$todaslasnoticias = consulta("Select o.* from ordenarbeta() as o  order by o.fecha desc", $dbname="dbname = FeedUncoma");
+    
 	$contador = 1;
     while ($row = pg_fetch_row($todaslasnoticias)) {
-		//$noticias = consulta("SELECT n.id_noticia, n.titulo, n.copete, n.link, n.fecha, n.autor, n.imagen, n.id_fuente, f.id_fuente, f.nombre, f.url, f.pagina FROM noticia as n INNER JOIN fuente as f ON (n.id_fuente = f.id_fuente) WHERE n.id_fuente=1 ORDER BY  n.fecha DESC LIMIT 3", $dbname="dbname = FeedUncoma");
-		
-			//agregar cada row1 a un array, luego ordenarlo por fecha y luego mostrarlo
-			//$row1 = pg_fetch_row($noticias);
-			
+
 			$muestra.= "<div class='media row'>";
 			$tituloX = "<h4 class='media-heading'>" . $row[2]. "</h4>";
 			$resumenX = $row[3];
-			if(trim($row[11]) != ""){
-				$autorX = "Autor: " . $row[11];
+			if(trim($row[7]) != ""){
+				$autorX = "Autor: " . trim($row[7]);
 			}else{
 				$autorX = "";
 			}
 			
+			$feicha = $row[5][8] . $row[5][9] . "/" .$row[5][5] . $row[5][6] . "/" . $row[5][0] . $row[5][1] . $row[5][2] . $row[5][3];
 			
-			$publica = "<div class='publica'>-" . $row[0] . "-</div>";
-			
-			
+			$publica = "<div class='publica'>-" . $row[0] . " - " . $feicha . "</div>";
 			$verMasX = "<a href='" . $row[4] . "'>Ver más</a>";
-			$imaTemp = trim($row[12]);
-			// Deslockear luego $imagenX = "<a href='" . "./img/not1.jpg" . "' class='thumbnail'> <img src='" . "./img/not1.jpg" . "' alt='imagen'>ampliar</a>";
-			
+			$imaTemp = trim($row[6]);
 			
 			$noticiaX = $tituloX . $publica . $resumenX . "<br>". $autorX . "<br>" . $verMasX;
 			
@@ -194,7 +186,6 @@ function mostrarNoticias2() {
 			$muestra.= "</div><hr/>";
 		
     }
-	//$muestra .= "<div style='text-align: center;'><img style='width: 50%; height: 20px; padding: 12px 15px 0px 15px;' src='./imgs/loader.gif' alt='Inicio' /></div>";
     pg_free_result($todaslasnoticias);
     echo $muestra;
 }

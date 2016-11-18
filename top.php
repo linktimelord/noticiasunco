@@ -3,15 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Noticias Unco</title>
 	    <meta property="og:url"           content="http://conu.fi.uncoma.edu.ar/noticiasunco/" />
 	    <meta property="og:type"          content="website" />
 	    <meta property="og:title"         content="Noticias Unco" />
 	    <meta property="og:description"   content="Resumen de noticias de las distintas facultades de la Universidad del Comahue" />
 	    <meta property="og:image"         content="http://conu.fi.uncoma.edu.ar/noticiasunco/imgs/lgface.jpg" />
-	    
-        
-	    <link rel="icon" type="image/jpeg" href="./imgs/favicon.jpg" />
+        <title>Noticias Unco</title>
+	    <link rel="shortcut icon" href="./imgs/favicon.jpg">
+            <link rel="icon" href="./imgs/favicon.jpg" type="image/x-icon">
+
 	    
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<meta name="news_keywords" content="prensa, noticias, universidad, comahue, pedco, uncoma" />

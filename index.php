@@ -1,9 +1,11 @@
-<form class="cl formu" id="cosult" method="post" action="preconsult.php">
+
 
 <?php
 //<script type="text/javascript" src="novedades.js"></script>
 //header("Access-Control-Allow-Origin: *");
 include'top.php';
+
+
 include'rss_bd_server.php';
 //cargarFeed();
 //mostrarFeed();

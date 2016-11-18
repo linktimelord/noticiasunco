@@ -11,7 +11,8 @@
 	    <meta property="og:image"         content="http://conu.fi.uncoma.edu.ar/noticiasunco/imgs/lgface.jpg" />
 	    
         <link rel="shortcut icon" href="./imgs/favicon.jpg">
-        <link rel="icon" href="./imags/favicon.jpg" type="image/x-icon">
+        <link rel="icon" href="./imgs/favicon.jpg" type="image/x-icon">
+	    
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<meta name="news_keywords" content="prensa, noticias, universidad, comahue, pedco, uncoma" />
 		<script src="jquery/jquery.js"></script>

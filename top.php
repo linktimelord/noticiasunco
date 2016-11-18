@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <meta property="og:url"           content="http://conu.fi.uncoma.edu.ar/noticiasunco/" />
+	    <meta property="og:url"           content="http://conu.fi.uncoma.edu.ar/noticiasunco/index.php" />
 	    <meta property="og:type"          content="website" />
 	    <meta property="og:title"         content="Noticias Unco" />
 	    <meta property="og:description"   content="Resumen de noticias de las distintas facultades de la Universidad del Comahue" />
